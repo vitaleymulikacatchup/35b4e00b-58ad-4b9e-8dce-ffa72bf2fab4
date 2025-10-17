@@ -1,4 +1,4 @@
-use client";
+"use client";
 
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
@@ -23,12 +23,12 @@ const assetMap = [
 export default function Page() {
   return (
     <ThemeProvider defaultButtonVariant="icon-arrow" defaultTextAnimation="entrance-slide" borderRadius="pill">
-      <div id="nav" data-section="nav">
+      <div id="nav" data-section="nav" className="scroll-mt-24">
         <NavbarLayoutFloatingInline
           navItems={[
             { name: "Home", id: "hero" },
             { name: "About", id: "about" },
-            { name: "Services", id: "services" },
+            { name: "Services", id: "feature" },
             { name: "Team", id: "team" },
             { name: "Contact", id: "contact" }
           ]}
@@ -40,8 +40,8 @@ export default function Page() {
           <HeroSplit
             title="Leading IT Solutions"
             description="Transforming your business through innovative technology"
-            imageSrc={assetMap.find(a => a.id === "hero-image")?.url ?? "/public/images/placeholder.webp"}
-            imageAlt={assetMap.find(a => a.id === "hero-image")?.alt || "Decorative image"}
+            imageSrc={assetMap.find(a => a.id === "hero-image")?.url}
+            imageAlt={assetMap.find(a => a.id === "hero-image")?.alt}
           />
         </div>
       </div>
@@ -54,8 +54,8 @@ export default function Page() {
               { title: "Innovation", description: "Leading industry advancements.", icon: Lightbulb },
               { title: "Reliability", description: "Dependable IT services." }
             ]}
-            imageSrc={assetMap.find(a => a.id === "about-image")?.url ?? "/public/images/placeholder.webp"}
-            imageAlt={assetMap.find(a => a.id === "about-image")?.alt || "Decorative image"}
+            imageSrc={assetMap.find(a => a.id === "about-image")?.url}
+            imageAlt={assetMap.find(a => a.id === "about-image")?.alt}
           />
         </div>
       </div>
@@ -65,8 +65,8 @@ export default function Page() {
             title="Our Services"
             description="Explore the services we offer to enhance your IT infrastructure."
             features={[
-              { id: "01", title: "Cloud Solutions", description: "Secure and scalable cloud services.", imageSrc: assetMap.find(a => a.id === "feature-image")?.url ?? "/public/images/placeholder.webp", imageAlt: assetMap.find(a => a.id === "feature-image")?.alt || "Decorative image" },
-              { id: "02", title: "Cybersecurity", description: "Advanced protection strategies for your data.", imageSrc: assetMap.find(a => a.id === "feature-image")?.url ?? "/public/images/placeholder.webp", imageAlt: assetMap.find(a => a.id === "feature-image")?.alt || "Decorative image" }
+              { id: "01", title: "Cloud Solutions", description: "Secure and scalable cloud services.", imageSrc: assetMap.find(a => a.id === "feature-image")?.url, imageAlt: assetMap.find(a => a.id === "feature-image")?.alt },
+              { id: "02", title: "Cybersecurity", description: "Advanced protection strategies for your data.", imageSrc: assetMap.find(a => a.id === "feature-image")?.url, imageAlt: assetMap.find(a => a.id === "feature-image")?.alt }
             ]}
           />
         </div>
@@ -77,8 +77,8 @@ export default function Page() {
             title="Meet Our Team"
             description="Our dedicated team is here to support your IT needs."
             members={[
-              { id: "1", name: "Sophie P.", role: "Digital Nomad", imageSrc: assetMap.find(a => a.id === "team-image-1")?.url ?? "/public/images/placeholder.webp", imageAlt: assetMap.find(a => a.id === "team-image-1")?.alt || "Decorative image" },
-              { id: "2", name: "John D.", role: "Tech Specialist", imageSrc: assetMap.find(a => a.id === "team-image-1")?.url ?? "/public/images/placeholder.webp", imageAlt: assetMap.find(a => a.id === "team-image-1")?.alt || "Decorative image" }
+              { id: "1", name: "Sophie P.", role: "Digital Nomad", imageSrc: assetMap.find(a => a.id === "team-image-1")?.url, imageAlt: assetMap.find(a => a.id === "team-image-1")?.alt },
+              { id: "2", name: "John D.", role: "Tech Specialist", imageSrc: assetMap.find(a => a.id === "team-image-1")?.url, imageAlt: assetMap.find(a => a.id === "team-image-1")?.alt }
             ]}
           />
         </div>
@@ -89,8 +89,8 @@ export default function Page() {
             title="What Our Clients Say"
             description="Valued feedback from our partnering businesses."
             testimonials={[
-              { id: "1", name: "Alisa Hester", role: "PM, Hourglass", company: "Web Design Agency", rating: 5, imageSrc: assetMap.find(a => a.id === "testimonial-image")?.url ?? "/public/images/placeholder.webp", imageAlt: assetMap.find(a => a.id === "testimonial-image")?.alt || "Decorative image" },
-              { id: "2", name: "Greg H.", role: "CEO", company: "Tech Innovators", rating: 5, imageSrc: assetMap.find(a => a.id === "testimonial-image")?.url ?? "/public/images/placeholder.webp", imageAlt: assetMap.find(a => a.id === "testimonial-image")?.alt || "Decorative image" }
+              { id: "1", name: "Alisa Hester", role: "PM, Hourglass", company: "Web Design Agency", rating: 5, imageSrc: assetMap.find(a => a.id === "testimonial-image")?.url, imageAlt: assetMap.find(a => a.id === "testimonial-image")?.alt },
+              { id: "2", name: "Greg H.", role: "CEO", company: "Tech Innovators", rating: 5, imageSrc: assetMap.find(a => a.id === "testimonial-image")?.url, imageAlt: assetMap.find(a => a.id === "testimonial-image")?.alt }
             ]}
           />
         </div>
@@ -101,8 +101,8 @@ export default function Page() {
             tag="Contact Us"
             title="Get in Touch"
             description="Reach out to us for any queries or support."
-            imageSrc={assetMap.find(a => a.id === "contact-media")?.url ?? "/public/images/placeholder.webp"}
-            imageAlt={assetMap.find(a => a.id === "contact-media")?.alt || "Decorative image"}
+            imageSrc={assetMap.find(a => a.id === "contact-media")?.url}
+            imageAlt={assetMap.find(a => a.id === "contact-media")?.alt}
           />
         </div>
       </div>
